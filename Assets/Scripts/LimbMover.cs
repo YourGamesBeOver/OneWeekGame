@@ -18,7 +18,7 @@ public class LimbMover : MonoBehaviour
     {
 	    if (Input.GetButton(Axis))
 	    {
-	        Vector3 mouseDelta = new Vector3 {x = Mathf.Clamp01(Input.GetAxis("Horizontal")), y = Mathf.Clamp01(Input.GetAxis("Vertical")), z = Mathf.Clamp01(Input.mouseScrollDelta.y)};
+	        Vector3 mouseDelta = new Vector3 {x = Mathf.Clamp(Input.GetAxis("Horizontal"), -1f, 1f), y = Mathf.Clamp(Input.GetAxis("Vertical"), -1f, 1f), z = Mathf.Clamp(Input.mouseScrollDelta.y, -1f, 1f)};
 	        if (Input.GetButton("Alt"))
 	        {
 	            var t = mouseDelta.y;
