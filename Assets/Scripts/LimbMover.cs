@@ -25,12 +25,8 @@ public class LimbMover : MonoBehaviour
 	            mouseDelta.y = mouseDelta.z;
 	            mouseDelta.z = t;
 	        }
-            DebugHUD.setValue("mouseDelta", mouseDelta);
 	        var worldDelta = Camera.main.transform.TransformDirection(mouseDelta);
-            DebugHUD.setValue("worldDelta", worldDelta);
 	        var force = Vector3.ClampMagnitude(worldDelta*ForceScale, MaxForce);
-            DebugHUD.setValue("Force", force);
-            DebugHUD.setValue("ForceMag", force.magnitude);
             rgb.AddForce(force);
 	    }
 	}
