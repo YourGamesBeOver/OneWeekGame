@@ -6,7 +6,6 @@ public class PickUpItem : Objective
     {
         base.ObjectiveBehavior(collidedWith);
 
-        transform.position = collidedWith.transform.position;
-        transform.SetParent(collidedWith.transform);
+        transform.SetParent(collidedWith.transform, true);
     }
 }
