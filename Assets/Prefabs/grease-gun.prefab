@@ -14,7 +14,8 @@ GameObject:
   - 198: {fileID: 19813872}
   - 114: {fileID: 11475534}
   - 114: {fileID: 11482696}
-  m_Layer: 0
+  - 114: {fileID: 11496946}
+  m_Layer: 16
   m_Name: grease-gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +30,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 401992}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +47,7 @@ GameObject:
   - 4: {fileID: 411488}
   - 33: {fileID: 3385174}
   - 23: {fileID: 2306680}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Ggun_uv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +62,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 485912}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,6 +218,18 @@ MonoBehaviour:
   pickup: {fileID: 11475534}
   particles: {fileID: 19813872}
   fireForce: 10
+--- !u!114 &11496946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 112500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef3c9a8f86e9ae84388337249d15306b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Strength: 1
 --- !u!198 &19813872
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1593,7 +1606,7 @@ ParticleSystem:
     plane4: {fileID: 0}
     plane5: {fileID: 0}
     m_Dampen:
-      scalar: 0
+      scalar: 0.67
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1628,7 +1641,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     m_Bounce:
-      scalar: 1
+      scalar: 0.24
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1663,7 +1676,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     m_EnergyLossOnCollision:
-      scalar: 0
+      scalar: 0.39
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1705,7 +1718,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 1
   SubModule:

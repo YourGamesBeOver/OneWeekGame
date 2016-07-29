@@ -10,9 +10,11 @@ GameObject:
   - 4: {fileID: 444752}
   - 198: {fileID: 19860116}
   - 199: {fileID: 19943904}
-  m_Layer: 0
+  - 136: {fileID: 13677682}
+  - 114: {fileID: 11489180}
+  m_Layer: 15
   m_Name: Fire
-  m_TagString: Untagged
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +29,7 @@ GameObject:
   - 4: {fileID: 464434}
   - 198: {fileID: 19892680}
   - 199: {fileID: 19976134}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +43,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105042}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -18.39, y: -6.35, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children:
@@ -61,6 +63,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 444752}
   m_RootOrder: 0
+--- !u!114 &11489180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cc6fd1dac3bf744baebf0241e5a24da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxStrength: 100
+  SizeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.2
+      inSlope: 1.5949401
+      outSlope: 1.5949401
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1.6255977
+      outSlope: 1.6255977
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  particles: []
+--- !u!136 &13677682
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 105042}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.02
+  m_Height: 0
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.71}
 --- !u!198 &19860116
 ParticleSystem:
   m_ObjectHideFlags: 1
